@@ -1,0 +1,3 @@
+name: "Home page"
+rows: []
+template: "Ten24CMSPagesBundle::Pages\\HomePage\\pagetemplate.html.twig"

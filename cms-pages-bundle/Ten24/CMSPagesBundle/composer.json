@@ -1,0 +1,36 @@
+{
+    "name": "tentwofour/cms-pages-bundle",
+    "type": "symfony-bundle",
+    "description": "The CMS Pages Bundle provides a common set of pages for the Kunstmaan CMS - HomePage, ContentPage, and Separator Page",
+    "keywords": ["kunstmaan", "cms", "admin"],
+    "homepage": "https://github.com/tentwofour/cms-starter-pages",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Blair D. Patterson",
+            "homepage": "http://tentwentyfour.ca",
+            "email": "blair@tentwentyfour.ca"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "~2.3",
+        "doctrine/orm": "~2.2,>=2.2.3",
+        "kunstmaan/node-bundle": "2.3.*",
+        "sensio/framework-extra-bundle": ">=2.3.0,<4.0.0",
+        "kunstmaan/admin-bundle": "2.3.*",
+        "kunstmaan/adminlist-bundle": "2.3.*"
+    },
+    "require-dev": {
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-0": { "Ten24\\CMSPagesBundle": "" }
+    },
+    "target-dir": "Ten24/CMSPagesBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

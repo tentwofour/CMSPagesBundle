@@ -1,0 +1,7 @@
+name: "Three column page"
+rows:
+    - regions:
+        - { name: "left_sidebar", span: 3 }
+        - { name: "main", span: 6 }
+        - { name: "right_sidebar", span: 3 }
+template: "Ten24CMSPagesBundle::Pages\\Common\\three-column-pagetemplate.html.twig"

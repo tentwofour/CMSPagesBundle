@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-sm-4">
+        <h4>In this section</h4>
+        {% set activeNode = nodemenu.getActiveForDepth(nodemenu.current.node.level + 1) %}
+        {% include 'Ten24CMSPagesBundle:Layout:submenu.html.twig' with { items: activeNode.children } %}
+    </div>
+    
+    <div class="col-sm-8">
+        {% set seo = get_seo_for(page) %}
+        {{ seo.metaDescription }}
+    </div>
+</div>
