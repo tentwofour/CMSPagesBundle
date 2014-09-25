@@ -1,8 +1,9 @@
 <?php
 
-namespace Ten24\CMSPagesBundle\Entity\Pages;
+namespace Ten24\CMSPagesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Ten24\CMSPagesBundle\Form\SeparatorPageAdminType;
 
 /**
  * SeparatorPage
@@ -20,7 +21,7 @@ class SeparatorPage extends \Kunstmaan\NodeBundle\Entity\AbstractPage implements
      */
     public function getDefaultAdminType()
     {
-        return new \Ten24\CMSPagesBundle\Form\Pages\SeparatorPageAdminType();
+        return new SeparatorPageAdminType();
     }
 
     /**
@@ -32,7 +33,7 @@ class SeparatorPage extends \Kunstmaan\NodeBundle\Entity\AbstractPage implements
         return array(
                 array(
                         'name' => 'Content Page',
-                        'class' => 'Ten24\CMSPagesBundle\Entity\Pages\ContentPage'));
+                        'class' => 'Ten24\CMSPagesBundle\Entity\ContentPage'));
     }
 
     /**
@@ -62,6 +63,6 @@ class SeparatorPage extends \Kunstmaan\NodeBundle\Entity\AbstractPage implements
      */
     public function getDefaultView()
     {
-        return 'Ten24CMSPagesBundle:Pages:Common/view.html.twig';
+        return 'Ten24CMSPagesBundle:SeparatorPage:view.html.twig';
     }
 }

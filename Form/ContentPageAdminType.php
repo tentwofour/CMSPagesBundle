@@ -1,15 +1,15 @@
 <?php
 
-namespace Ten24\CMSPagesBundle\Form\Pages;
+namespace Ten24\CMSPagesBundle\Form;
 
 use Kunstmaan\NodeBundle\Form\PageAdminType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
- * The admin type for home pages
+ * The admin type for content pages
  */
-class HomePageAdminType extends PageAdminType
+class ContentPageAdminType extends PageAdminType
 {
     /**
      * Builds the form.
@@ -27,11 +27,6 @@ class HomePageAdminType extends PageAdminType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         parent::buildForm($builder, $options);
-        
-        $builder->add('introduction', 'textarea', array(
-                'attr' => array('rows' => 10, 'cols' => 600, 'class' => 'rich_editor'),
-                'required' => true,
-        ));
     }
 
     /**
@@ -42,17 +37,17 @@ class HomePageAdminType extends PageAdminType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Ten24\CMSPagesBundle\Entity\Pages\HomePage'
+            'data_class' => 'Ten24\CMSPagesBundle\Entity\ContentPage'
         ));
     }
 
     /**
-     * @assert () == 'homepage'
+     * Returns the name of this type.
      *
-     * @return string
+     * @return string The name of this type
      */
     public function getName()
     {
-        return 'homepage';
+        return 'ten24_cms_page_contentpage';
     }
 }

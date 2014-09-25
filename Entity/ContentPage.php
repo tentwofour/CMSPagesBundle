@@ -1,8 +1,8 @@
 <?php
 
-namespace Ten24\CMSPagesBundle\Entity\Pages;
+namespace Ten24\CMSPagesBundle\Entity;
 
-use Ten24\CMSPagesBundle\Form\Pages\ContentPageAdminType;
+use Ten24\CMSPagesBundle\Form\ContentPageAdminType;
 
 use Doctrine\ORM\Mapping as ORM;
 use Kunstmaan\NodeBundle\Entity\AbstractPage;
@@ -35,8 +35,8 @@ class ContentPage extends AbstractPage  implements HasPageTemplateInterface
     {
         return array (
             array(
-                'name'  => 'ContentPage',
-                'class' => 'Ten24\CMSPagesBundle\Entity\Pages\ContentPage'
+                'name'  => 'Content Page',
+                'class' => 'Ten24\CMSPagesBundle\Entity\ContentPage'
             ),
         );
     }
@@ -69,6 +69,6 @@ class ContentPage extends AbstractPage  implements HasPageTemplateInterface
      */
     public function getDefaultView()
     {
-        return 'Ten24CMSPagesBundle:Pages\ContentPage:view.html.twig';
+        return 'Ten24CMSPagesBundle:ContentPage:view.html.twig';
     }
 }

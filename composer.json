@@ -20,6 +20,8 @@
         "sensio/framework-extra-bundle": ">=2.3.0,<4.0.0",
         "kunstmaan/admin-bundle": "2.3.*",
         "kunstmaan/adminlist-bundle": "2.3.*"
+        "kunstmaan/pagepart-bundle": "2.3.*"
+        "kunstmaan/node-bundle": "2.3.*"
     },
     "require-dev": {
     },

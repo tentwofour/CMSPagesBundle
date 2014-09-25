@@ -1,13 +1,11 @@
 <?php
 
-namespace Ten24\CMSPagesBundle\Entity\Pages;
+namespace Ten24\CMSPagesBundle\Entity;
 
-use Ten24\CMSPagesBundle\Form\Pages\HomePageAdminType;
+use Ten24\CMSPagesBundle\Form\HomePageAdminType;
 use Doctrine\ORM\Mapping as ORM;
 use Kunstmaan\NodeBundle\Entity\AbstractPage;
 use Kunstmaan\PagePartBundle\Helper\HasPageTemplateInterface;
-use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * HomePage
@@ -37,10 +35,10 @@ class HomePage extends AbstractPage implements HasPageTemplateInterface
         return array(
                 array(
                         'name' => 'Separator Page',
-                        'class' => 'Ten24\CMSPagesBundle\Entity\Pages\ContentPage'),
+                        'class' => 'Ten24\CMSPagesBundle\Entity\SeparatorPage'),
                 array(
                         'name' => 'Content Page',
-                        'class' => 'Ten24\CMSPagesBundle\Entity\Pages\ContentPage'));
+                        'class' => 'Ten24\CMSPagesBundle\Entity\ContentPage'));
     }
 
     /**
@@ -70,6 +68,6 @@ class HomePage extends AbstractPage implements HasPageTemplateInterface
      */
     public function getDefaultView()
     {
-        return 'Ten24CMSPagesBundle:Pages\HomePage:view.html.twig';
+        return 'Ten24CMSPagesBundle:HomePage:view.html.twig';
     }
 }

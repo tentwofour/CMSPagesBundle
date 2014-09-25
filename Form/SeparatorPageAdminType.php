@@ -1,6 +1,6 @@
 <?php
 
-namespace Ten24\CMSPagesBundle\Form\Pages;
+namespace Ten24\CMSPagesBundle\Form;
 
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -33,7 +33,7 @@ class SeparatorPageAdminType extends \Kunstmaan\NodeBundle\Form\PageAdminType
      */
     public function getName()
     {
-        return 'ten24_fadadancewebsitebundle_separatorpagetype';
+        return 'ten24_cms_page_separatorpage';
     }
 
     /**
@@ -44,7 +44,7 @@ class SeparatorPageAdminType extends \Kunstmaan\NodeBundle\Form\PageAdminType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => '\Ten24\CMSPagesBundle\Entity\Pages\SeparatorPage'
+            'data_class' => '\Ten24\CMSPagesBundle\Entity\SeparatorPage'
         ));
     }
 }

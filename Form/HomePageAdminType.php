@@ -1,15 +1,15 @@
 <?php
 
-namespace Ten24\CMSPagesBundle\Form\Pages;
+namespace Ten24\CMSPagesBundle\Form;
 
 use Kunstmaan\NodeBundle\Form\PageAdminType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
- * The admin type for content pages
+ * The admin type for home pages
  */
-class ContentPageAdminType extends PageAdminType
+class HomePageAdminType extends PageAdminType
 {
     /**
      * Builds the form.
@@ -37,17 +37,17 @@ class ContentPageAdminType extends PageAdminType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Ten24\CMSPagesBundle\Entity\Pages\ContentPage'
+            'data_class' => 'Ten24\CMSPagesBundle\Entity\HomePage'
         ));
     }
 
     /**
-     * Returns the name of this type.
+     * @assert () == 'homepage'
      *
-     * @return string The name of this type
+     * @return string
      */
     public function getName()
     {
-        return 'page';
+        return 'ten24_cms_page_homepage';
     }
 }
