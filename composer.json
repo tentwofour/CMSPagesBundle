@@ -1,5 +1,5 @@
 {
-    "name": "tentwofour/cms-pages-bundle",
+    "name": "ten24/cms-pages-bundle",
     "type": "symfony-bundle",
     "description": "The CMS Pages Bundle provides a common set of pages for the Kunstmaan CMS - HomePage, ContentPage, and Separator Page",
     "keywords": ["kunstmaan", "cms", "admin"],
