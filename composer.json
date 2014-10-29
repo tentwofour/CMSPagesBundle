@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "ten24/cms-template": "dev-master"
+        "tentwofour/cms-template": "dev-master"
     },
     "require-dev": {
     },
