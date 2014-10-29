@@ -12,7 +12,7 @@
             "email": "blair@tentwentyfour.ca"
         }
     ],
-    "require": {
+    "suggest": {
         "tentwofour/cms-template": "dev-master"
     },
     "require-dev": {
