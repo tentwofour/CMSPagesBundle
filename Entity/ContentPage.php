@@ -2,20 +2,18 @@
 
 namespace Ten24\CMSPagesBundle\Entity;
 
-use Ten24\CMSPagesBundle\Form\ContentPageAdminType;
-
 use Doctrine\ORM\Mapping as ORM;
 use Kunstmaan\NodeBundle\Entity\AbstractPage;
 use Kunstmaan\PagePartBundle\Helper\HasPageTemplateInterface;
 use Symfony\Component\Form\AbstractType;
+use Ten24\CMSPagesBundle\Form\ContentPageAdminType;
 
 /**
- * ContentPage
+ * ContentPage Superclass
  *
- * @ORM\Entity()
- * @ORM\Table(name="ten24_cms_pages_content_pages")
+ * @ORM\MappedSuperclass()
  */
-class ContentPage extends AbstractPage  implements HasPageTemplateInterface
+abstract class ContentPage extends AbstractPage implements HasPageTemplateInterface
 {
 
     /**
@@ -33,10 +31,14 @@ class ContentPage extends AbstractPage  implements HasPageTemplateInterface
      */
     public function getPossibleChildTypes()
     {
-        return array (
+        return array(
             array(
                 'name'  => 'Content Page',
                 'class' => 'Ten24\CMSPagesBundle\Entity\ContentPage'
+            ),
+            array(
+                'name'  => 'Separator',
+                'class' => 'Ten24\CMSPagesBundle\Entity\SeparatorPage'
             ),
         );
     }
@@ -47,8 +49,8 @@ class ContentPage extends AbstractPage  implements HasPageTemplateInterface
     public function getPagePartAdminConfigurations()
     {
         return array(
-                'Ten24CMSPagesBundle:main',
-                'Ten24CMSPagesBundle:sidebar'
+            'Ten24CMSPagesBundle:main',
+            'Ten24CMSPagesBundle:sidebar'
         );
     }
 
@@ -58,9 +60,9 @@ class ContentPage extends AbstractPage  implements HasPageTemplateInterface
     public function getPageTemplates()
     {
         return array(
-                'Ten24CMSPagesBundle:default-one-column',
-                'Ten24CMSPagesBundle:default-two-column-left',
-                'Ten24CMSPagesBundle:default-two-column-right'
+            'Ten24CMSPagesBundle:default-one-column',
+            'Ten24CMSPagesBundle:default-two-column-left',
+            'Ten24CMSPagesBundle:default-two-column-right'
         );
     }
 

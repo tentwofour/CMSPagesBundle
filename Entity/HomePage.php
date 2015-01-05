@@ -8,12 +8,11 @@ use Kunstmaan\NodeBundle\Entity\AbstractPage;
 use Kunstmaan\PagePartBundle\Helper\HasPageTemplateInterface;
 
 /**
- * HomePage
+ * HomePage Superclass
  *
- * @ORM\Entity()
- * @ORM\Table(name="ten24_cms_pages_home_pages")
+ * @ORM\MappedSuperclass
  */
-class HomePage extends AbstractPage implements HasPageTemplateInterface
+abstract class HomePage extends AbstractPage implements HasPageTemplateInterface
 {
 
     /**
@@ -33,12 +32,12 @@ class HomePage extends AbstractPage implements HasPageTemplateInterface
     public function getPossibleChildTypes()
     {
         return array(
-                array(
-                        'name' => 'Separator Page',
-                        'class' => 'Ten24\CMSPagesBundle\Entity\SeparatorPage'),
-                array(
-                        'name' => 'Content Page',
-                        'class' => 'Ten24\CMSPagesBundle\Entity\ContentPage'));
+            array(
+                'name'  => 'Content Page',
+                'class' => 'Ten24\CMSPagesBundle\Entity\ContentPage'),
+            array(
+                'name'  => 'Separator',
+                'class' => 'Ten24\CMSPagesBundle\Entity\SeparatorPage'),);
     }
 
     /**
@@ -48,18 +47,19 @@ class HomePage extends AbstractPage implements HasPageTemplateInterface
     public function getPagePartAdminConfigurations()
     {
         return array(
-                'Ten24CMSPagesBundle:home');
+            'Ten24CMSPagesBundle:home');
     }
 
     /**
-     *
-     * @ERROR!!!
-     *
+     * @return array
      */
     public function getPageTemplates()
     {
         return array(
-                'Ten24CMSPagesBundle:homepage');
+            'Ten24CMSPagesBundle:default-one-column',
+            'Ten24CMSPagesBundle:default-two-column-left',
+            'Ten24CMSPagesBundle:default-two-column-right',
+            'Ten24CMSPagesBundle:homepage');
     }
 
     /**

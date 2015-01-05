@@ -20,7 +20,7 @@ class HomePageAdminType extends PageAdminType
      * @see FormTypeExtensionInterface::buildForm()
      *
      * @param FormBuilderInterface $builder The form builder
-     * @param array                $options The options
+     * @param array $options The options
      *
      * @SuppressWarnings("unused")
      */
@@ -48,6 +48,6 @@ class HomePageAdminType extends PageAdminType
      */
     public function getName()
     {
-        return 'ten24_cms_page_homepage';
+        return 'ten24cmspages_homepage';
     }
 }
