@@ -6,12 +6,12 @@ use Doctrine\ORM\Mapping as ORM;
 use Ten24\CMSPagesBundle\Form\SeparatorPageAdminType;
 
 /**
- * SeparatorPage
+ * SeparatorPage Mappedsuperclass
  *
- * @ORM\Table(name="ten24_cms_pages_separator_pages")
- * @ORM\Entity
+ * @ORM\Mappedsuperclass
  */
-class SeparatorPage extends \Kunstmaan\NodeBundle\Entity\AbstractPage implements \Kunstmaan\PagePartBundle\Helper\HasPageTemplateInterface
+class SeparatorPage extends \Kunstmaan\NodeBundle\Entity\AbstractPage
+    implements \Kunstmaan\PagePartBundle\Helper\HasPageTemplateInterface
 {
 
     /**
@@ -31,9 +31,12 @@ class SeparatorPage extends \Kunstmaan\NodeBundle\Entity\AbstractPage implements
     public function getPossibleChildTypes()
     {
         return array(
-                array(
-                        'name' => 'Content Page',
-                        'class' => 'Ten24\CMSPagesBundle\Entity\ContentPage'));
+            array(
+                'name'  => 'Content Page',
+                'class' => 'Ten24\CMSPagesBundle\Entity\ContentPage'),
+            array(
+                'name'  => 'Separator',
+                'class' => 'Ten24\CMSPagesBundle\Entity\SeparatorPage'));
     }
 
     /**
@@ -53,7 +56,7 @@ class SeparatorPage extends \Kunstmaan\NodeBundle\Entity\AbstractPage implements
     public function getPageTemplates()
     {
         return array(
-                'Ten24CMSPagesBundle:separator');
+            'Ten24CMSPagesBundle:separator');
     }
 
     /**

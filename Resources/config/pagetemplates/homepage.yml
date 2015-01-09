@@ -1,3 +1,5 @@
 name: "Home page"
-rows: []
+rows:
+    - regions:
+        - { name: "main", span: 12 }
 template: "Ten24CMSPagesBundle:HomePage:pagetemplate.html.twig"

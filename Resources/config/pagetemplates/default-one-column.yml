@@ -2,4 +2,4 @@ name: "One column page"
 rows:
     - regions:
         - { name: "main", span: 12 }
-template: "Ten24CMSPagesBundle::Pages\\Common\\one-column-pagetemplate.html.twig"
+template: "Ten24CMSPagesBundle:Common:one-column-pagetemplate.html.twig"

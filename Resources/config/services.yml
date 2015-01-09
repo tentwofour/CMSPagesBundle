@@ -1,0 +1,20 @@
+parameters:
+    ten24cmspages.form.type.admin.homepage.class: Ten24\CMSPagesBundle\Form\ContentPageAdminType
+    ten24cmspages.form.type.admin.contentpage.class: Ten24\CMSPagesBundle\Form\HomePageAdminType
+    ten24cmspages.form.type.admin.separatorpage.class: Ten24\CMSPagesBundle\Form\SeparatorPageAdminType
+
+services:
+    ten24cmspages.form.type.admin.homepage:
+        class: %ten24cmspages.form.type.admin.homepage.class%
+        tags:
+            - { name: form.type, alias: ten24cmspages.homepageadmin }
+
+    ten24cmspages.form.type.admin.contentpage:
+            class: %ten24cmspages.form.type.admin.contentpage.class%
+            tags:
+                - { name: form.type, alias: ten24cmspages.contentpageadmin }
+
+    ten24cmspages.form.type.admin.separatorpage:
+            class: %ten24cmspages.form.type.admin.separatorpage.class%
+            tags:
+                - { name: form.type, alias: ten24cmspages.separatorpageadmin }

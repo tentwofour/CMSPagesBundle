@@ -3,4 +3,4 @@ rows:
     - regions:
         - { name: "main", span: 8 }
         - { name: "sidebar", span: 4 }
-template: "Ten24CMSPagesBundle::Pages\\Common\\two-column-right-pagetemplate.html.twig"
+template: "Ten24CMSPagesBundle:Common:two-column-right-pagetemplate.html.twig"

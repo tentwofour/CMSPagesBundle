@@ -17,23 +17,13 @@ class SeparatorPageAdminType extends \Kunstmaan\NodeBundle\Form\PageAdminType
      * This method is called for each type in the hierarchy starting form the
      * top most type. Type extensions can further modify the form.
      * @param FormBuilderInterface $builder The form builder
-     * @param array                $options The options
+     * @param array $options The options
      *
      * @see FormTypeExtensionInterface::buildForm()
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         parent::buildForm($builder, $options);
-    }
-
-    /**
-     * Returns the name of this type.
-     *
-     * @return string The name of this type
-     */
-    public function getName()
-    {
-        return 'ten24_cms_page_separatorpage';
     }
 
     /**
@@ -46,5 +36,15 @@ class SeparatorPageAdminType extends \Kunstmaan\NodeBundle\Form\PageAdminType
         $resolver->setDefaults(array(
             'data_class' => '\Ten24\CMSPagesBundle\Entity\SeparatorPage'
         ));
+    }
+
+    /**
+     * Returns the name of this type.
+     *
+     * @return string The name of this type
+     */
+    public function getName()
+    {
+        return 'ten24cmspages_separatorpage';
     }
 }

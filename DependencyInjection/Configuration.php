@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $treeBuilder->root('ten24_cms_pages');
+        $treeBuilder->root('ten24cmspages');
 
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for
