@@ -40,8 +40,8 @@ class SeparatorPage extends \Kunstmaan\NodeBundle\Entity\AbstractPage
     }
 
     /**
-     *
-     * @return string[]
+     * Get possible page part admin configurations
+     * @return array
      */
     public function getPagePartAdminConfigurations()
     {
@@ -49,9 +49,8 @@ class SeparatorPage extends \Kunstmaan\NodeBundle\Entity\AbstractPage
     }
 
     /**
-     *
-     * @ERROR!!!
-     *
+     * Get possible page templates for this page
+     * @return array
      */
     public function getPageTemplates()
     {
