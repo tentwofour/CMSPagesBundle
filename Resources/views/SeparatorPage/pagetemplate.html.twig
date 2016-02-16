@@ -4,7 +4,7 @@
         {% set activeNode = nodemenu.getActiveForDepth(nodemenu.current.node.level + 1) %}
         {% include 'Ten24CMSPagesBundle:Layout:submenu.html.twig' with { items: activeNode.children } %}
     </div>
-    
+
     <div class="col-sm-8">
         {% set seo = get_seo_for(page) %}
         {{ seo.metaDescription }}

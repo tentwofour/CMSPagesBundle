@@ -31,16 +31,16 @@ abstract class ContentPage extends AbstractPage implements HasPageTemplateInterf
      */
     public function getPossibleChildTypes()
     {
-        return array(
-            array(
+        return [
+            [
                 'name'  => 'Content Page',
                 'class' => 'Ten24\CMSPagesBundle\Entity\ContentPage'
-            ),
-            array(
+            ],
+            [
                 'name'  => 'Separator',
                 'class' => 'Ten24\CMSPagesBundle\Entity\SeparatorPage'
-            ),
-        );
+            ],
+        ];
     }
 
     /**
@@ -48,10 +48,10 @@ abstract class ContentPage extends AbstractPage implements HasPageTemplateInterf
      */
     public function getPagePartAdminConfigurations()
     {
-        return array(
+        return [
             'Ten24CMSPagesBundle:main',
             'Ten24CMSPagesBundle:sidebar'
-        );
+        ];
     }
 
     /**
@@ -59,11 +59,11 @@ abstract class ContentPage extends AbstractPage implements HasPageTemplateInterf
      */
     public function getPageTemplates()
     {
-        return array(
+        return [
             'Ten24CMSPagesBundle:default-one-column',
             'Ten24CMSPagesBundle:default-two-column-left',
             'Ten24CMSPagesBundle:default-two-column-right'
-        );
+        ];
     }
 
     /**

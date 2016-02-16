@@ -20,11 +20,12 @@ class HomePageAdminType extends PageAdminType
      * @see FormTypeExtensionInterface::buildForm()
      *
      * @param FormBuilderInterface $builder The form builder
-     * @param array $options The options
+     * @param array                $options The options
      *
      * @SuppressWarnings("unused")
      */
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder,
+                              array $options)
     {
         parent::buildForm($builder, $options);
     }
@@ -36,9 +37,9 @@ class HomePageAdminType extends PageAdminType
      */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-        $resolver->setDefaults(array(
-            'data_class' => 'Ten24\CMSPagesBundle\Entity\HomePage'
-        ));
+        $resolver->setDefaults([
+                                   'data_class' => 'Ten24\CMSPagesBundle\Entity\HomePage'
+                               ]);
     }
 
     /**

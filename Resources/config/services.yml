@@ -10,11 +10,11 @@ services:
             - { name: form.type, alias: ten24cmspages.homepageadmin }
 
     ten24cmspages.form.type.admin.contentpage:
-            class: %ten24cmspages.form.type.admin.contentpage.class%
-            tags:
-                - { name: form.type, alias: ten24cmspages.contentpageadmin }
+        class: %ten24cmspages.form.type.admin.contentpage.class%
+        tags:
+            - { name: form.type, alias: ten24cmspages.contentpageadmin }
 
     ten24cmspages.form.type.admin.separatorpage:
-            class: %ten24cmspages.form.type.admin.separatorpage.class%
-            tags:
-                - { name: form.type, alias: ten24cmspages.separatorpageadmin }
+        class: %ten24cmspages.form.type.admin.separatorpage.class%
+        tags:
+            - { name: form.type, alias: ten24cmspages.separatorpageadmin }

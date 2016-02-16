@@ -2,10 +2,10 @@
 
 namespace Ten24\CMSPagesBundle\Entity;
 
-use Ten24\CMSPagesBundle\Form\HomePageAdminType;
 use Doctrine\ORM\Mapping as ORM;
 use Kunstmaan\NodeBundle\Entity\AbstractPage;
 use Kunstmaan\PagePartBundle\Helper\HasPageTemplateInterface;
+use Ten24\CMSPagesBundle\Form\HomePageAdminType;
 
 /**
  * HomePage Superclass
@@ -14,7 +14,6 @@ use Kunstmaan\PagePartBundle\Helper\HasPageTemplateInterface;
  */
 abstract class HomePage extends AbstractPage implements HasPageTemplateInterface
 {
-
     /**
      * Returns the default backend form type for this page
      *
@@ -31,13 +30,13 @@ abstract class HomePage extends AbstractPage implements HasPageTemplateInterface
      */
     public function getPossibleChildTypes()
     {
-        return array(
-            array(
+        return [
+            [
                 'name'  => 'Content Page',
-                'class' => 'Ten24\CMSPagesBundle\Entity\ContentPage'),
-            array(
+                'class' => 'Ten24\CMSPagesBundle\Entity\ContentPage'],
+            [
                 'name'  => 'Separator',
-                'class' => 'Ten24\CMSPagesBundle\Entity\SeparatorPage'),);
+                'class' => 'Ten24\CMSPagesBundle\Entity\SeparatorPage'],];
     }
 
     /**
@@ -46,8 +45,8 @@ abstract class HomePage extends AbstractPage implements HasPageTemplateInterface
      */
     public function getPagePartAdminConfigurations()
     {
-        return array(
-            'Ten24CMSPagesBundle:home');
+        return [
+            'Ten24CMSPagesBundle:home'];
     }
 
     /**
@@ -55,11 +54,11 @@ abstract class HomePage extends AbstractPage implements HasPageTemplateInterface
      */
     public function getPageTemplates()
     {
-        return array(
+        return [
             'Ten24CMSPagesBundle:default-one-column',
             'Ten24CMSPagesBundle:default-two-column-left',
             'Ten24CMSPagesBundle:default-two-column-right',
-            'Ten24CMSPagesBundle:homepage');
+            'Ten24CMSPagesBundle:homepage'];
     }
 
     /**

@@ -2,8 +2,8 @@
 
 namespace Ten24\CMSPagesBundle\Form;
 
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
  * SeparatorPageAdminType
@@ -16,12 +16,14 @@ class SeparatorPageAdminType extends \Kunstmaan\NodeBundle\Form\PageAdminType
      *
      * This method is called for each type in the hierarchy starting form the
      * top most type. Type extensions can further modify the form.
+     *
      * @param FormBuilderInterface $builder The form builder
-     * @param array $options The options
+     * @param array                $options The options
      *
      * @see FormTypeExtensionInterface::buildForm()
      */
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder,
+                              array $options)
     {
         parent::buildForm($builder, $options);
     }
@@ -33,9 +35,9 @@ class SeparatorPageAdminType extends \Kunstmaan\NodeBundle\Form\PageAdminType
      */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-        $resolver->setDefaults(array(
-            'data_class' => '\Ten24\CMSPagesBundle\Entity\SeparatorPage'
-        ));
+        $resolver->setDefaults([
+                                   'data_class' => '\Ten24\CMSPagesBundle\Entity\SeparatorPage'
+                               ]);
     }
 
     /**

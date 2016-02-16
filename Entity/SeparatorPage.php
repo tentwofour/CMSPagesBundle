@@ -3,15 +3,16 @@
 namespace Ten24\CMSPagesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Kunstmaan\NodeBundle\Entity\AbstractPage;
+use Kunstmaan\PagePartBundle\Helper\HasPageTemplateInterface;
 use Ten24\CMSPagesBundle\Form\SeparatorPageAdminType;
 
 /**
  * SeparatorPage Mappedsuperclass
  *
- * @ORM\Mappedsuperclass
+ * @ORM\MappedSuperclass
  */
-class SeparatorPage extends \Kunstmaan\NodeBundle\Entity\AbstractPage
-    implements \Kunstmaan\PagePartBundle\Helper\HasPageTemplateInterface
+abstract class SeparatorPage extends AbstractPage implements HasPageTemplateInterface
 {
 
     /**
@@ -30,32 +31,34 @@ class SeparatorPage extends \Kunstmaan\NodeBundle\Entity\AbstractPage
      */
     public function getPossibleChildTypes()
     {
-        return array(
-            array(
+        return [
+            [
                 'name'  => 'Content Page',
-                'class' => 'Ten24\CMSPagesBundle\Entity\ContentPage'),
-            array(
+                'class' => 'Ten24\CMSPagesBundle\Entity\ContentPage'],
+            [
                 'name'  => 'Separator',
-                'class' => 'Ten24\CMSPagesBundle\Entity\SeparatorPage'));
+                'class' => 'Ten24\CMSPagesBundle\Entity\SeparatorPage']];
     }
 
     /**
      * Get possible page part admin configurations
+     *
      * @return array
      */
     public function getPagePartAdminConfigurations()
     {
-        return array();
+        return [];
     }
 
     /**
      * Get possible page templates for this page
+     *
      * @return array
      */
     public function getPageTemplates()
     {
-        return array(
-            'Ten24CMSPagesBundle:separator');
+        return [
+            'Ten24CMSPagesBundle:separator'];
     }
 
     /**

@@ -16,6 +16,12 @@
         "tentwofour/cms-template": "dev-master"
     },
     "require-dev": {
+        "kunstmaan/node-bundle": "3.2.x-dev",
+        "friendsofsymfony/user-bundle": "2.0.*@dev",
+        "kunstmaan/pagepart-bundle": "3.2.x-dev",
+        "doctrine/orm": "2.5.*",
+        "symfony/form": "2.8.*",
+        "symfony/options-resolver": "2.8.*"
     },
     "minimum-stability": "stable",
     "autoload": {
